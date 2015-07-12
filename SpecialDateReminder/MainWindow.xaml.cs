@@ -1,5 +1,5 @@
 ﻿/********************************************REVISION HISTORY********************************************
-2015-07-11  Jana    Added code to initial dataset from database and save to database at closing.
+2015-07-11  Jana    Added code to initialize dataset from database and save back to database at closing.
 
 
 
