@@ -1,8 +1,38 @@
-﻿<Window x:Class="SpecialDateReminder.MainWindow"
+﻿<!--*******************************************************************************************************************
+2015-07-19  Jana    Added UI elements such as calendar and ribbon with tabs for each group of functionality with buttons
+    
+    
+************************************************************************************************************************-->
+    <RibbonWindow x:Class="SpecialDateReminder.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Special Date Reminder" Height="650" Width="525" WindowStartupLocation="CenterScreen" >
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Ribbon Grid.Row="0">
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu Visibility="Collapsed" />
+            </Ribbon.ApplicationMenu>
+            <RibbonTab Header="Event">
+                <RibbonButton Label="Add Event" />
+                <RibbonButton Label="Remove Event" />
+            </RibbonTab>
+            <RibbonTab Header="Person">
+                <RibbonButton Label="Add Person" />
+                <RibbonButton Label="Remove Person" />
+            </RibbonTab>
+            <RibbonTab Header="Wish List">
+                <RibbonButton Label="Add Wish List" />
+                <RibbonButton Label="Remove Wish List" />
+                <RibbonButton Label="Modify Wish List" />
+            </RibbonTab>
+        </Ribbon>
+        <Viewbox Grid.Row="1">
+            <Calendar >
+            </Calendar>
+        </Viewbox>
     </Grid>
-</Window>
+</RibbonWindow>
